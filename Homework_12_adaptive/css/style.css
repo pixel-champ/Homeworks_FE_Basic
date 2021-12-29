@@ -1,0 +1,157 @@
+@import url(../fonts/font-stylesheet.css);
+
+
+/* --- DEFAULT --- */
+/* Default settings */
+/* Desktop view */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-overflow: hidden;
+}
+body {
+    margin: 0 auto;
+    font-family: 'Montserrat';
+}
+a {
+    text-decoration: none;
+    color: unset;
+}
+ul {
+    list-style-type: none;
+}
+.container {
+    max-width: 1024px;
+    margin: 48px auto;
+}
+/* Links */
+.top-page {
+    margin-bottom: 96px;
+}
+.primary-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-link {
+    font-size: 20px;
+}
+.menu-link:hover {
+    color: rgb(146, 146, 146);
+}
+.logo-image {
+    width: 100px;
+    height: 60px;
+}
+/* Burger menu */
+.burger-button {
+    display: none;
+    width: 48px;
+    height: 31px;
+    border: none;
+    background-color: transparent;
+    /* background: 
+    transparent
+    url(../img/burger-menu.svg)
+    no-repeat;
+    cursor: pointer; */
+}
+.burger-line,
+.burger-button::before,
+.burger-button::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+}
+.burger-button:active {
+    transform: scale(0.95);
+}
+/* Navigation links */
+.navigation-menu {
+    display: flex;
+    column-gap: 80px;
+}
+/* Text */
+.banner-description {
+    text-align: center;
+    height: 204px;
+    font-size: 28px;
+}
+/* Banner */
+.banner-slider img {
+    width: 100%;
+}
+/* Slick dots */
+.slick-dots {
+    padding: 10px 0;
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.slick-dots button {
+    font-size: 0;
+    border: transparent;
+    background-color: rgb(146, 146, 146);
+    padding: 7px;
+    border-radius: 50%;
+}
+.slick-dots button:hover {
+    background-color: rgb(85, 85, 85);
+}
+/* JavaScript classes */
+.hide-element {
+    display: none;
+}
+.show-element {
+    display: flex;
+}
+
+/* --- BREAKPOINT --- */
+/* Tablet view */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 57px 0 48px;
+    }
+    .top-page {
+        margin-bottom: 26px;
+    }
+    .primary-navigation {
+        display: block;
+        position: relative;
+        height: 48px;
+        flex-flow: column nowrap;
+    }
+    .navigation-menu {
+        display: none;
+    }
+    .burger-button {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .logo-image {
+        display: block;
+        width: 80px;
+        height: 48px;
+        margin: 0 auto;
+        justify-self: center;
+    }
+    /* .banner-slider {
+        margin-bottom: 24px;
+    } */
+    .banner-description {
+        font-size: 20px;
+    }
+    .show-element {
+        display: flex;
+    }   
+}
+
+
