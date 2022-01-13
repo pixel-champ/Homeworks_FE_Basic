@@ -1,0 +1,468 @@
+@import url(../fonts/font-style.css);
+
+/* --- Mobile first ---  */
+/* --- Mobile View --- */
+/* iPhone 8 (max-width: 373px) */ 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin: 0 auto;
+    /* position: relative; */
+}
+h1,h2 {
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    color: #A4A4A4;
+}
+ul {
+    list-style-type: none;
+}
+.container {
+    max-width: 335px;
+    margin: 0 auto;
+}
+/* .container > * {
+    margin-left: 20px;
+    margin-right: 20px;
+} */
+/* .container > * {
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+.secondary-heading {
+    z-index: 2;
+    font-size: 20px;
+    line-height: 56px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: 24px;
+}
+.slide img {
+    width: 100%;
+}
+
+
+
+/* Header & Navigation - START */
+    /* Setting the structure */
+.header-inner {
+    /* width: 100vw;
+    width: 100%; */
+    position: relative;
+}
+.navigation {
+    display: flex;
+}
+.logo-heading,
+.navigation-links {
+    display: none;
+}
+    /* Setting the logo heading */
+.header.menu-open .brand-logo path {
+    fill: #fff;
+}
+.header.menu-open .logo-heading {
+    margin-bottom: 42px;
+}
+.header.menu-open .brand-logo {
+    width: 80px;
+    height: 48px;
+}
+.header.menu-open .brand-logo:hover {
+    opacity: 0.8;
+}
+    /* Setting the nav. links*/
+.nav-link {
+    color: #fff;
+    font-size: 20px;
+}
+    /* Setting the innitial nav. button */
+.btn-nav {
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    width: 48px;
+    height: 31px;
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.btn-nav-inner,
+.btn-nav::before,
+.btn-nav::after {
+    z-index: 2;
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+.btn-nav:hover {
+    opacity: 0.8;
+}
+.btn-nav:active {
+    transform: scale(0.95);
+}
+    /* Making the nav. button cross */
+.btn-nav.cross-burger {
+    height: 45px;
+    top: 35px;
+}
+.btn-nav.cross-burger .btn-nav-inner {
+    display: none;
+}
+.btn-nav.cross-burger::before {
+    top: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+.btn-nav.cross-burger::after {
+    top: 20px;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+    /* Making the expanding menu appear */
+.header.menu-open .navigation {
+    padding: 30px 20px;
+    z-index: 3;
+    background-color: #000;
+    position: absolute;
+    min-height: 332px;
+    /* width: 100vw; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header.menu-open .logo-heading {
+    display: block;
+}
+.header.menu-open .navigation-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+}
+    /* Making the menu take 100% of the viewport */
+
+/* Header & Navigation - END */
+
+
+
+/* Banner - START */
+.banner {
+    margin-bottom: 24px;
+}
+.banner-inner {
+    /* overflow-x: visible;
+    display: flex;
+    flex-direction: column;
+    width: unset; */
+    position: relative;
+    margin-bottom: 42px;
+    
+}
+/* .banner-slider {
+    flex-basis: 1;
+    width: 100vw;
+}  */
+/* .banner-slider {
+    position: absolute;
+} */
+/* .slide {
+    height: 200px;
+} 
+.slide img {
+    width: 100%;
+} */
+.banner-description {
+    text-align: center;
+    font-size: 18px;
+}
+/* Banner - END */
+
+
+
+/* History - START */
+.description {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+.year {
+    font-size: 24px;
+    display: block;
+}
+/* History - END */
+
+
+
+/* Contact Us - START */
+.contact-us {
+    margin-bottom: 102px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+}
+.user-input {
+    border: 1px solid #000;
+    resize: none;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    text-align: center;
+    padding: 20px;
+    /* min-height: 150px; */
+}
+.btn-contact {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    height: 60px;
+    border-radius: 8px;
+}
+.btn-contact:hover {
+    color: #A4A4A4;
+}
+.btn-contact:active {
+    transform: translateY(2px);
+    transition-duration: 0.2s;
+}
+/* Contact Us - END */
+
+
+
+
+
+
+/* --- Tablet View --- */
+@media (min-width: 376px) {
+    .container {
+        max-width: 928px;
+    }
+    .secondary-heading {
+        line-height: 66px;
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+
+/* Header & Navigation - START */
+    /* Setting the structure */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 122px;
+}
+    /* Setting the logo */
+.logo-heading {
+    display: block;  
+}
+.header.menu-open .logo-heading {
+    margin-bottom: 0px;
+}
+.brand-logo {
+    width: 80px;
+    height: 48px;
+}
+.brand-logo:hover {
+    opacity: 0.70;
+}
+    /* /* Setting the button */ */
+.btn-nav {
+    top: 34px;
+}
+.btn-nav:hover {
+    opacity: 0.70;
+}
+.btn-nav-inner,
+.btn-nav::before,
+.btn-nav::after {
+    background-color: #000;
+}
+.cross-burger.btn-nav-inner,
+.cross-burger.btn-nav::before,
+.cross-burger.btn-nav::after {
+    background-color: #fff;
+}
+    /* Adding some spacing to prevent the banner from moving */
+.header.menu-open + .banner {
+    padding-top: 122px;
+}
+    /* Making the expanding menu appear */
+.header.menu-open .navigation {
+    padding: 34px;
+    min-height: 316px;
+    row-gap: 80px;
+    justify-content: flex-start;
+}
+.header.menu-open .navigation-links {
+    flex-direction: row;
+    column-gap: 67px;
+}
+/* Header & Navigation - END */
+
+/* Banner - START */
+.banner {
+    margin-bottom: 38px;
+}
+.banner-inner {
+    margin-bottom: 24px;
+}
+.banner-description {
+    font-size: 20px;
+}
+/* Banner - END */
+
+/* History - START */
+.description {
+    padding: 48px;
+    font-size: 18px;
+}
+.year {
+    font-size: 48px;
+    display: inline;
+    line-height: 40px;
+}
+/* History - END */
+
+/* Contact Us - START */
+.contact-form {
+    border: 1px solid #000;
+    padding: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+}
+.user-input {
+    text-align: start;
+    flex-basis: 500px;
+    padding: 8px 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.btn-contact {
+    flex-basis: 200px;
+    font-size: 28px;
+}
+.btn-contact:active {
+    transform: scale(0.97);
+    transition-duration: 0.2s;
+}
+/* Contact Us - END */
+}
+
+
+
+
+
+
+/* --- Desktop View --- */
+@media (min-width: 928px) {
+    .container {
+        max-width: 1024px;
+    }
+    .secondary-heading {
+        font-size: 40px;
+        line-height: 80px;
+        margin-bottom: 47px;
+    }
+    .secondary-heading:first-of-type {
+        margin-bottom: 60px;
+    }
+
+
+
+/* Header & Navigation - START */
+.navigation {
+    height: 249px;
+    justify-content: space-between;
+}
+.brand-logo {
+    width: 100px;
+    height: 60px;
+}
+.navigation-links {
+    display: flex;
+    column-gap: 80px;
+}
+.nav-link {
+    color: #000;
+    font-size: 20px;
+}
+.btn-nav {
+    display: none;
+}
+/* Header & Navigation - END */
+
+
+
+/* Banner - START */
+.banner-inner {
+    margin-bottom: 42px;
+}
+.banner-description {
+    font-size: 28px;
+}
+/* Banner - END */
+
+
+
+/* History - START */
+.history-blocks {
+    display: flex;
+    column-gap: 28px;
+    align-items: stretch;
+}
+.description {
+    margin-bottom: 60px;
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+/* History - END */
+
+/* Contact Us - START */
+/* Contact Us - END */
+}
+
+
+
+
+
+/* Header & Navigation - START */
+/* Header & Navigation - END */
+
+/* Banner - START */
+/* Banner - END */
+
+/* History - START */
+/* History - END */
+
+/* Contact Us - START */
+/* Contact Us - END */
+
