@@ -289,9 +289,9 @@ ul {
 .brand-logo:hover {
     opacity: 0.70;
 }
-    /* /* Setting the button */ */
+    /* Setting the button */
 .btn-nav {
-    top: 34px;
+    top: 40px;
 }
 .btn-nav:hover {
     opacity: 0.70;
@@ -320,6 +320,7 @@ ul {
 .header.menu-open .navigation-links {
     flex-direction: row;
     column-gap: 67px;
+    text-align: center;
 }
 /* Header & Navigation - END */
 
