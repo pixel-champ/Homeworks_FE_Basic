@@ -1,0 +1,219 @@
+/* Global settings - START */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color1: rgba(196, 196, 196, 0.75);
+    --color2: rgba(200, 164, 164, 0.55);
+    --color3: #3A3A3A;
+    --color4: #EAD836;
+    --color6: #F4F5F7;
+    --color7: #E97171;
+    --color8: #2EC1AC;
+    --color9: #616161;
+    --color10: #C8A4A4;
+    --color11: #B0B0B0;
+    --color12: #898989;
+    --color13: #fff;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color3);
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--color3);
+}
+.top-page a:hover,
+.bottom-page a:hover {
+    color: var(--color10);
+    transition-duration: 0.3s;
+}
+    /* Setting containers */
+.gen-container {
+    width: 1025px;
+    min-height: 70px;
+    margin: 0 auto;
+}
+[class*="wrapper"] {
+    background-color: var(--color1);
+}
+/* Global settings - END */
+
+
+
+/* Header & Search - START */
+.top-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+}
+.main-heading {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+}
+    /* Setting the search */
+.search-form {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+    /* Button */
+.search-submit {
+    position: absolute;
+    padding: 11px;
+    left: 8px;
+    border: none;
+    background-image: url(../img/search-icon.svg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.search-submit:active {
+    background-size: 15px;
+}
+    /* Search text */
+.search-input-field {
+    height: 45px;
+    width: 295px;
+    padding-left: 40px;
+    padding-right: 10px;
+    border: none;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color9);
+    display: block;
+}
+.search-input-field:focus {
+    outline: 2px solid var(--color10);
+    border-radius: 5px;
+}
+/* Header & Search - END */
+
+
+
+/* Content (Furniture items) - START */
+.products {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 69.72px;
+    margin-bottom: 136px;
+}
+.product {
+    flex: 0 0 294.85px;
+    margin-bottom: 47px;
+    position: relative;
+}
+.product-image-wrapper {
+    position: relative;
+}
+.product-img {
+    display: block;
+    /* Дві нижні властивості задані щоб вирівняти виключно одне зображення з 5-го продукта, котре має порушені пропорції, через шо руйнується сусіднє зображення зліва. */
+    /* В іншому випадку працює й без цих двох властивостей. */
+    width: 100%;
+    height: 301px;
+}
+    /* Setting the link */
+.product-text-link {
+    display: block;
+    padding: 16px 34.85px 30px 16px;
+    background-color: var(--color6);
+}
+.product:hover .product-image-wrapper a::after {
+    content: "";
+    background-color: var(--color2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+    /* Setting the description */
+.product-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 8px;
+}
+.product-definition {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 8px;
+    color: var(--color12);
+    display: block;
+}
+.product-price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-right: 12px;
+}
+.product-discount {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--color11);
+    text-decoration: line-through;
+}
+    /* Setting promo cards */
+span[class*="promo"] {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    font-size: 16;
+    line-height: 150%;
+    color: var(--color13);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promo-50 {
+    background-color: var(--color7);
+}
+.promo-new {
+    background-color: var(--color8);
+}
+.promo-star {
+    background-color: var(--color4);
+    background-image: url(../img/star-card.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 9px;
+}
+/* Content (Furniture items) - END */
+
+
+
+/* Footer & Navigation - START */
+.site-link, .legal-text {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+}
+.legal-text {
+    text-transform: capitalize;
+}
+.bottom-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.global-nav ul {
+    display: flex;
+    gap: 28px;
+}
+/* Footer & Navigation - END */
