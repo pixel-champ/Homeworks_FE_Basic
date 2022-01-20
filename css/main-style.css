@@ -22,3 +22,6 @@ iframe {
   height: 15rem;
 }
 
+.section-content_logo {
+  max-height: 24px;
+}
