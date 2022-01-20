@@ -1,0 +1,35 @@
+/* Global settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+/* Banner */
+.banner-wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+    background-color: #81e3ed;
+}
+.banner {
+    width: 1000px;
+    height: 440px;
+    margin: 0 auto;
+    background-color: #df5935;
+    /* Background images */
+    background-image: url(img/coffe-cup.png), url(img/chat-icon.png);
+    background-position: 435px 36px, 560px -20px;
+    background-size: 195px, 660px;
+    background-repeat: no-repeat;
+}
+.main-heading {
+    display: inline-block;
+    margin: 100px 60px 120px;
+    width: 330px;
+    /* Font */
+    font-size: 50px;
+    color: #fff;
+}

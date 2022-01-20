@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}
+/* Page wrapper START */
+#wrapper {
+    margin: 38px auto;
+    width: 467px;
+}
+/* Header before the form */
+.top-heading {
+    margin-bottom: 25px;
+    /* Font */
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: normal;
+    text-align: center;
+}
+/* Form START */
+.event-form {
+    border-radius: 15px;
+    padding: 34px 33px 26px;
+    background-color: rgba(202, 109, 79, 0.3);;
+}
+.event-form ul {
+    list-style: none
+}
+.event-form fieldset {
+    border: none;
+}
+    /* General label settings */
+    /* Block level elements */
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+    /* The asterisk (*) settings */
+.required-sign {
+    color: rgb(255, 0, 0);
+}
+    /* Labels for radio buttons */
+    /* Inline level elements */
+.form-label-radio {
+    margin-left: 3px;
+}
+    /* Positioning of radio buttons */
+.radio-list li {
+    margin-bottom: 11px;
+}
+.radio-list {
+    margin-bottom: 25px;
+}
+    /* Setting for white text entry boxes */
+.input-field, 
+#comments-text-area {
+    width: 100%;
+    height: 34px;
+    border-radius: 10px;
+    /* Для мене дивно, що border-radius працює навіть якщо вказати border: none;, як я зробив нижче. Ставив також border-color: transparent;, але різниці не помітив. */
+    border: none;
+    margin-bottom: 25px;
+    /* Додав padding, щоб посунути текст від меж. */
+    padding: 10px 15px
+}
+    /* Overriding the settings for the textarea */
+#comments-text-area {
+    height: 98px;
+    margin-bottom: 15px;
+}
+    /* Two buttons at the bottom */
+.buttons {
+    width: 183px;
+    height: 37px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+}
+/* Чи потрібен padding для кнопки форми, аби вся площина натискалась, в порівнянні з посиланням? В минулому д/з робили з посилання (<a>...</a>) кнопку й додавали для цього padding. Зараз кнопка працює з width/hight без padding. */
+[type="reset"] {
+    background-color: #C4C4C4;
+    margin-right: 30px;
+}
+[type="submit"] {
+    color: #fff;
+    background-color: #000;
+}
+/* Використав такий селектор по атрибутам, бо його вага 0.1.0, й ти говорила намагатися уникати id. Тут вірно виконано, чи селектор занадто узгагальнюючий й варто ставити свій class кожній кнопці?  */
+    /* The link to the terms and conditions, and the user agreement */
+.terms-external-link {
+    text-decoration: none;
+    color: #3256D9;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+/* Form END */
+/* Page wrapper END */
+
+
+/* Спробував використати legend */
+.event-form legend {
+    position: absolute;
+    top: 38px;
+    left: 332px;
+
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: normal;
+    text-align: center;
+    color: #ff0000;
+}

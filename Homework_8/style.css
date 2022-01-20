@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+
+    height: 100vh;
+
+    background-color: #f5fcff;
+    background-image: 
+        url(img/grass.png),  
+        url(img/deer.png), 
+        url(img/cloud.png), 
+        url(img/sun.png);
+    background-repeat: 
+        repeat-x, 
+        no-repeat, 
+        repeat-x, 
+        no-repeat;
+    background-size: 
+        auto 150px,
+        auto 500px,
+        auto 200px,
+        250px;
+    background-position: 
+        bottom,
+        bottom center,
+        center 50px,
+        top right;
+}

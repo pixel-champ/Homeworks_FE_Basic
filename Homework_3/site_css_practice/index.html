@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p><span class="pink-italic">CSS (Cascading Style Sheets)</span> — язык таблиц стилей, который позволяет прикреплять стиль (например, шрифты и цвет) к структурированным документам (например, документам HTML и приложениям XML).</p>
+    <picture>
+        <img src="img/css-selector-structure.png" alt="Иллюстарация структуры стиля селектора в CSS">
+    </picture>
+    <h1><span class="funny-background-color">Виды таблиц стилей</span></h1>
+    <ol>
+        <li><span class="bold-titles">Внешняя таблица стилей</span>: представляет собой текстовый файл с расширением .css, в котором находится набор CSS-стилей элементов. Файл создаётся в редакторе кода, так же как и HTML-страница. Внутри файла могут содержатся только стили, без HTML-разметки. Внешняя таблица стилей подключается к веб-странице с помощью тега <span class="pink-italic">&lt;link&gt;</span>, расположенного внутри раздела <span class="pink-italic">&lt;head&gt;&lt;/head&gt;</span>. Такие стили работают для всех страниц сайта.</li>
+        <li><span class="bold-titles">Внутренние стили</span>: встраиваются в раздел <span class="pink-italic">&lt;head&gt;&lt;/head&gt;</span> HTML-документа и определяются внутри тега <span class="pink-italic">&lt;style&gt;&lt;/style&gt;</span>. Внутренние стили имеют приоритет над внешними, но уступают встроенным стилям (заданным через атрибут style).</li>
+        <li><span class="bold-titles">Встроенные стили</span>: Когда мы пишем встроенные стили, мы пишем CSS-код в HTML-файл, непосредственно внутри тега элемента с помощью атрибута style Такие стили действуют только на тот элемент, для которого они заданы.</li>
+    </ol>
+    <p><a href="https://html5book.ru/osnovy-css/" target="_blank">Ссылка на источник</a></p>
+</body>
+</html>

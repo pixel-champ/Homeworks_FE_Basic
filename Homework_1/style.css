@@ -1,0 +1,49 @@
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    width: 55rem;
+    margin: 0 auto;
+}
+
+.boxes {
+    display: flex;
+}
+
+.box1 {
+    width: 17rem;
+}
+
+.sm-box {
+    width: 5rem;
+}
+
+.logo-sm-image {
+    width: 4rem;
+}
+.logo-sm-image:hover {
+    width: 4.2rem;
+    transition-duration: 0.3s;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+#profile-photo {
+    width: 13rem;
+    margin-top: 4.5rem;
+    border-radius: 50%;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+#profile-photo:hover {
+    width: 13.2rem;
+    transition-duration: 0.3s;
+}
+
+h1 {
+    font-size: 1.8rem;
+}

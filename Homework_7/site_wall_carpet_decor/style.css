@@ -1,0 +1,141 @@
+/* Global settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    /* Font */
+    font-family: 'Roboto', sans-serif;
+}
+/* Page  wrapper */
+.container {
+    width: 960px;
+    margin: 42px auto 37px;
+}
+/* Navigation */
+.top-page-navigation {
+    height: 168px;
+    margin-bottom: 14px;
+    /* Linear gradient */
+    background-image: linear-gradient(to bottom, #FBB7E0 0%, #949EB8 100%);
+}
+.description-paragraph {
+    margin-bottom: 22px;
+}
+
+/* Content */
+.secondary-heading {
+    /* Font */
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: normal;
+    margin-bottom: 14px;
+}
+
+/* Section 1 - Decorative images */
+.content-image-section {
+    padding: 41px 22px 26px;
+    border: 1px solid #E5482B;
+    margin-bottom: 18px;
+    /* Background image */
+    background-image: url(img/silver-butterflies.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.image-subsection {
+    /* Floating parts of the section  */
+    float: left;
+}
+.image-subsection img {
+    margin-bottom: 31px;
+    margin-right: 29px;
+}
+.button-content-images {
+    display: block;
+    width: 271px;
+    padding: 13px 0;
+    background-color: #E5482B;
+    margin-bottom: 30px;
+    /* Font */
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.content-image-paragraph {
+    margin-bottom: 35px;
+    /* Font */
+    font-size: 22px;
+    line-height: 26px;
+}
+
+/* Section 2 - Decorative images */
+.decorative-image-section {
+    padding: 38px 48px 30px;
+    border: 1px solid #8333F1;
+    border-radius: 0 30px 30px 30px;
+    margin-bottom: 16px;
+    /* Background image */
+    background-image: url(img/space-girl.png);
+    background-repeat: no-repeat;
+    background-position: 677px 27px;
+}
+.decorative-image-section .secondary-heading {
+    margin-bottom: 22px;
+}
+.decorative-image-paragraph {
+    margin-bottom: 22px;
+    width: 608px;
+    /* Font */
+    font-size: 18px;
+    line-height: 26px;
+}
+.button-decorative-images {
+    display: block;
+    width: 239px;
+    padding: 13px 0;
+    background-color: #8333F1;
+    border-radius: 30px 30px 0 30px;
+    /* Font */
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Section 3 */
+.carpet-section {
+    height: 290px;
+    margin-bottom: 22px;
+    /* Background images */
+    background-image:  url(img/friends.png),url(img/mighty-carpet.png);
+    background-size: auto, cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+/* Footer */
+.bottom-page-footer {
+    height: 153px;
+    border-top: 1px solid #2541D3;
+    border-right: 1px solid #DE1919;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #09FDC2;
+    /* Background image */
+    background-image: url(img/rainbow.png);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+
+}
+/* Cancelling out the float */
+.clearfix {
+    clear: both;
+}

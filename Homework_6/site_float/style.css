@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+}
+/* Page wrapper */
+#wrapper {
+    width: 1255px;
+    /* По макету 1252px, звідки беруться додаткові 3px мені невідомо. Зі 1252px праве зображення випадає вниз, з 1255px все стає на місця. */
+    min-height: 100px;
+    margin: 38px auto;
+}
+/* FLOAT LEFT */
+.left-container {
+    float: left;
+}
+    /* The PRODUCTS section */
+    /* Settings for top products */
+.products {
+    width: 200px;
+    padding: 28px 15px 27px 16px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 38px;
+}
+.product-description {
+    border-top: 1px solid black;
+    padding-top: 14px;
+    padding-bottom: 15px;
+}
+/* Використав селектором по атрибутам. Чи був би class тут кращим вибором? */
+[src^="img/products/"] { 
+    margin-bottom: 17px;
+    height: 143px;
+    width: 143px;
+}
+    /* Links-Buttons under the products */
+.buy-button {
+    display: block;
+    width: 169px;
+    background-color: #557848;
+    border-radius: 10px;
+    padding: 5px 0 6px;
+    /* Font */
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+    /* Початкове значення робить літери занадто притиснутими одне до одного, що відрізняється від макету. */
+    letter-spacing: 1px;
+}
+    /* The SUPPORT section */
+.support {
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-right: 40px;
+    padding: 19px 27px 20px;
+}
+.support-icon {
+    display: block;
+    float: left;
+    margin-right: 49px;
+    border-radius: 50%;
+}
+    /* Text in the support banner */
+.help-message {
+    margin-top: 44px;
+    float: left;
+    /* Font */
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+}
+/* FLOAT RIGHT */
+.right-container {
+    float: right;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+/* .promo-banner {
+    width: 532px;
+} */
+    /* Чи це було завдан */
+/* CLEARING FLOAT */
+.clearfix {
+    clear: both;
+    width: 0;
+    height: 0;
+}
+

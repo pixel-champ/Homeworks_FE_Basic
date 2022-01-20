@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto;
+    font-size: 12px;
+}
+#wrapper {
+    width: 426px;
+    background-color: #7CCB7B;
+    margin: 0 auto;
+    padding: 21px 26px 22px;
+    /* padding: top & left and right & bottom */
+}
+.main-heading {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    /* Font */
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+}
+/* .profile-picture {
+    display: block;
+    margin: 0 auto;
+} */
+.profile-picture-wrapper {
+    text-align: center;
+    padding: 20px 0;
+}
+/* .profile-picture {
+    padding: 20px 0;
+} */
+.cv-info {
+    margin-bottom: 18px;
+}
+.cv-info h2 {
+    margin-bottom: 5px;
+    /* Font */
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #1A47E7;
+}
+.cv-info-about.first {
+    margin-bottom: 5px;
+}
+.cv-info-about h3 {
+    font-size: 15px;
+    font-weight: normal;
+}
+.cv-info-years {
+    color: #5e5e5e;
+}
+.cv-info-subject{
+    margin-bottom: 0px;
+}
+.cv-info-years, 
+.cv-info-subject {
+    display: block;
+}
+
+

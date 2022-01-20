@@ -1,0 +1,112 @@
+/* Global settings */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Default settings */
+h1 {
+    font-size: 32px;
+    letter-spacing: -0.8px;  
+    /* margin-bottom: 10px; */
+    /* The figma sketch says it should be 10px, but the PerfectPixel extension says otherwise - when the picture is laid over my own page, they don't match at all for some reason, so I slightly changed the margin value of it */
+    margin-bottom: 6px;
+}
+h2 {
+    font-size: 18px;
+    letter-spacing: -0.6px;
+}
+h3 {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    /* margin-bottom: 10px; */
+    /* Figma mandates the margin value to be 10px, but it doesn't match with PerfectPixel */
+    margin-bottom: 7px;
+}
+p {
+    font-size: 14px;
+    line-height: 16px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+/* Multiple border settings */
+img, .container, .page-bottom {
+    border: 1px dotted black;
+}
+/* Multiple margin-bottom settings */
+.navigation, .head-content, p, img {
+    margin-bottom: 15px;
+}
+/* The body of the page */
+
+/* Container (START) */
+    /* The whole page is put inside of this container */
+    /* I couldn't add padding to the body section, so this wrapper was used instead */
+    /* I tried to change '.container' to 'body' in CSS, but the difference was clear - there was no padding and the border laid back to back with the rest of the content for unknown to me reason  */
+
+    .container {
+    /* If you change the name of this declaration block from '.container' to 'body', you will see what I was talking about in the preceding comment */
+    width: 621px;
+    height: 542px;
+    /* The Figma sketch says that the width and height should be 620px and 541px respectively, but I changed those by 1 pixel trying to be pixel perfect with those elements when using the PerfectPixel extension. Is it a mistake?  */
+    margin: 20px auto 0;
+    padding: 15px 14px;
+}
+/* Navigation */
+.nav-links {
+    /* Size & Position */
+    display: inline-block;
+    width: 120px;
+    background-color: #708090;
+    /* padding: 6px 38px; */
+    /* I assume that some padding was supposed to be used without changing the display property, but there is a different number of characters for each link and it is impossible to guess one  padding measurement for all of them so that the width for all stays at 120 pixels */
+    border-radius: 5px;
+    margin-right: 11px;
+    padding: 6px 0;
+    /* Font & Text */
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: white;
+}
+
+/* Content start */
+/* Section header */
+.head-content {
+    width: 590px;
+    height: 90px;
+    background-color: #F5F5F5;
+    padding: 13px 13px;
+}
+/* Image */
+img {
+    display: block;
+    padding: 10px;
+    width: 120px;
+    height: 150px;
+    margin-top: 17px;
+}
+/* Content end */
+
+/* Footer start */
+.page-bottom {
+    width: 590px;
+    height: 68px;
+    padding: 13px 9px 15px;
+}
+.related-links {
+    font-size: 14px;
+    color: #708090;
+    margin-right: 19px;
+    letter-spacing: -0.3px;
+}
+/* Footer end */
+
+
+/* Container (END)*/

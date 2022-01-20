@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Don't miss out on the unique opportunity! Fill out the form to join our remarkable event.">
+    <title>Form - Come join us!</title>
+    <!-- Google Font - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- My CSS settings -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page wrapper START -->
+    <div id="wrapper">
+        <h1 class="top-heading">Fill out of the form</h1>
+        <form class="event-form" action="form-submition.php" method="POST">
+            <fieldset>
+                <!-- <legend>Fill out of the form</legend> -->
+                <ul>
+                    <!-- First name -->
+                    <li>
+                        <label class="form-label" for="first-name">First name:<span class="required-sign">*</span></label>
+                        <input id="first-name" class="input-field" type="text" name="first-name" required>
+                    </li>
+                    <!-- Your email -->
+                    <li>
+                        <label class="form-label" for="email">Your email:<span class="required-sign">*</span></label>
+                        <input id="email" class="input-field" type="email" name="email" required>
+                    </li>
+                    <!-- Phone number -->
+                    <li>
+                        <label class="form-label" for="phone-number">Your phone number:</label>
+                        <input id="phone-number" class="input-field"  type="tel" name="phone-number" minlength="10"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+                    </li>
+                    <!-- User country -->
+                    <li>
+                        <!-- WARNING! A very long list ahead. -->
+                        <label class="form-label" for="user-country">Select your country:</label>
+                        <select id="user-country" class="input-field" name="user-country">
+                            <optgroup label="Europe">
+                                <option value="Austria">Austria</option>
+                                <option value="Belarus">Belarus</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Croatia">Croatia</option>
+                                <option value="Cyprus">Cyprus</option>
+                                <option value="Czech-Republic">Czech Republic</option>
+                                <option value="Denmark">Denmark</option>
+                                <option value="Estonia">Estonia</option>
+                                <option value="Finland">Finland</option>
+                                <option value="France">France</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Greece">Greece</option>
+                                <option value="Hungary">Hungary</option>
+                                <option value="Iceland">Iceland</option>
+                                <option value="Republic-of-Ireland">Republic of Ireland</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Kosovo">Kosovo</option>
+                                <option value="Latvia">Latvia</option>
+                                <option value="Lithuania">Lithuania</option>
+                                <option value="Netherlands">Netherlands</option>
+                                <option value="Norway">Norway</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Romania">Romania</option>
+                                <option value="Slovakia">Slovakia</option>
+                                <option value="Slovenia">Slovenia</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Ukraine" selected>Ukraine</option>
+                                <option value="United-Kingdom">United Kingdom</option>
+                                <option value="Vatican-City">Vatican City</option>
+                            </optgroup>
+                            <optgroup label="North America">
+                                <option value="Canada">Canada</option>
+                                <option value="Greenland">Greenland (territory of Denmark)</option>
+                                <option value="United-States-of-America">United States of America</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Bermuda">Bermuda</option>
+                            </optgroup>
+                            <optgroup label="Central America">
+                                <option value="Bahamas">Bahamas</option>
+                                <option value="Barbados">Barbados</option>
+                                <option value="Costa Rica">Costa Rica</option>
+                                <option value="Cuba">Cuba</option>
+                                <option value="Dominican Republic">Dominican Republic</option>
+                                <option value="El Salvador">El Salvador</option>
+                                <option value="Grenada">Grenada</option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="Haiti">Haiti</option>
+                                <option value="Jamaica">Jamaica</option>
+                                <option value="Nicaragua">Nicaragua</option>
+                                <option value="Panama">Panama</option>
+                                <option value="Puerto Rico (US Territory)">Puerto Rico (US Territory)</option>
+                                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            </optgroup>
+                            <optgroup label="South America">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="French Guiana">French Guiana</option>
+                                <option value="Guyana">Guyana</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Peru">Peru</option>
+                                <option value="Suriname">Suriname</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Venezuela">Venezuela</option>
+                            </optgroup>
+                            <optgroup label="Oceania">
+                                <option value="Australia">Australia</option>
+                                <option value="Fiji">Fiji</option>
+                                <option value="New Zealand">New Zealand</option>
+                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                <option value="Samoa">Samoa</option>
+                                <option value="Solomon Islands">Solomon Islands</option>
+                            </optgroup>
+                        </select>
+                    </li>
+                    <!-- Attendance selection -->
+                    <li>
+                        <p class="form-label">I want to attend event:<span class="required-sign">*</span>
+                        </p>
+                        <ul class="radio-list">
+                            <li>
+                                <input id="online-attendance" name="attendance-format" value="online-attendance" type="radio" required>
+                                <!-- Чи потрібно ставити атрибут required в кожному radio? В Google Chrome кнопки чудово працювали з required лише в одному radio, але додав до обох. -->
+                                <label class="form-label-radio" for="online-attendance">Online</label>
+                            </li>
+                            <li>
+                                <input id="offline-attendance" name="attendance-format" value="offline-attendance" type="radio" required>
+                                <label class="form-label-radio" for="offline-attendance" >Offline</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Comments -->
+                    <li>
+                        <label class="form-label" for="comments-text-area">Comments:</label>
+                        <textarea name="comments-text-area" id="comments-text-area" style="resize: none;"></textarea>
+                        <!-- cols and rows attributes were deleted to set the dimensions with CSS -->
+                    </li>
+                    <!-- Privacy policy -->
+                    <li>
+                        <input id="terms" type="checkbox" name="terms-agree" value="terms-" required>
+                        <label for="terms">I agree with <a class="terms-external-link" href="#" target="_blank">Privacy Policy</a> <span class="required-sign">*</span></label>
+                    </li>
+                    <!-- Buttons -->
+                    <li>
+                        <input class="buttons" type="reset" value="Сбросить">
+                        <input class="buttons" type="submit" value="Отправить">  
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+    <!-- Page wrapper END -->
+</body>
+</html>
