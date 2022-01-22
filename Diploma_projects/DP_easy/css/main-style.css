@@ -1,0 +1,438 @@
+/* Default settings */
+
+/* Nunito Sans (400,700) & Roboto (400&700) */
+@import url(../fonts/font-style.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-blue: #284854;
+  --beige: #f4f6f0;
+  --dark-beige: #D3DAC3;
+  --aqua-blue: #60c1bd;
+  --salad-green: #8bc441;
+  --dark-green: #798B56;
+  --white: #fff;
+}
+
+body {
+  font-family: "Nunito Sans";
+  color: var(--deep-blue);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+span.d-block {
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+}
+
+[class*="-body"] {
+  width: 1230px;
+  margin: 0 auto;
+}
+
+.aqua-blue-link:hover {
+    color: var(--dark-green);
+    text-shadow: 2px 2px 10px #28485427;
+    opacity: 0.8;
+}
+
+/* Header - START */
+.header-container {
+  background-color: var(--deep-blue);
+  padding-top: 23px;
+  margin-bottom: 289px;
+}
+
+    /* Logo & Top links & Login */
+.top-bar {
+  padding: 23px 75px 25px 44px;
+  margin-bottom: 135px;
+  background-color: #60c1bd;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand-logo {
+  font-size: 30px;
+  color: var(--white);
+}
+.brand-logo:hover {
+    opacity: 0.7;
+}
+.top-links-list {
+  display: flex;
+  column-gap: 95px;
+}
+.top-link {
+  color: inherit;
+  font-size: 18px;
+  /* margin-right: 95px; */
+}
+.top-link:hover {
+    color: var(--white);
+}
+.login-btn {
+  padding: 4px 21px;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--white);
+  border: 1px solid var(--white);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+    /* Hero box */
+.hero-box {
+    padding: 0 65px;
+}
+
+    /* Text content */
+.hero-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.primary-heading {
+    color: var(--salad-green);
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 102px;
+    margin-bottom: 60px;
+}
+.primary-description {
+    max-width: 542px;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--white);
+}
+
+    /* Application */
+.hero-appl-wrapper {
+    position: relative;
+    top: 123px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-appl {
+    background-color: var(--beige);
+    height: 203px;
+    width: 506px;
+    padding: 45px 30px 47px;
+    display: flex;
+}
+.appl-description {
+    max-width: 237px;
+}
+.appl-title {
+    color: var(--salad-green);
+    font-size: 37px;
+    font-family: "Roboto";
+    font-weight: 400;
+    line-height: 43px;
+    margin-bottom: 9px;
+}
+.appl-link {
+    color: var(--aqua-blue);
+    font-size: 20px;
+}
+/* Header - END */
+
+
+
+/* Main - START */
+.main-body {
+    width: 956px;
+    margin: 0 auto 80px;
+}
+/* Header (Main) */
+.header-main {
+    text-align: center;
+    margin-bottom: 83px;
+}
+.top-overlap {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--aqua-blue);
+}
+.secondary-heading {
+    font-size: 55px;
+    font-family: "Roboto";
+}
+    /* Features */
+.feature {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feature-img-wrapper {
+    width: 285px;
+    height: 285px;
+    background-color: var(--beige);
+
+    border-radius: 50%;
+    position: relative;    
+}
+.feature-description-wrapper {
+    max-width: 541px;
+}
+.feature .feature-img-wrapper::before {
+    content: "";
+    z-index: 2;
+    top: center;
+    left: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+    /* Feature 1/3 (Step one) */
+.step-one .feature-img-wrapper::before {
+    background-image: url(../img/main/great-vets.svg);
+    left: 50px;
+    bottom: 29px;
+    height: 287px;
+}
+
+    /* Feature 2/3 (Next) */
+.next .feature-img-wrapper::before {
+    background-image: url(../img/main/partner.svg);
+    left: -27px;
+    bottom: 33px;
+    height: 304px;
+}
+
+    /* Feature 3/3 (Result) */
+.result .feature-img-wrapper::before {
+    background-image: url(../img/main/happy-vets.svg);
+    left: 74px;
+    bottom: 41px;
+    height: 258px;
+}
+
+    /* Feature content */
+.middle-overlap {
+    margin-bottom: 10px;
+    color: var(--dark-green);
+    font-size: 20px;
+    font-weight: 700;
+}
+.feature .tertiary-heading {
+    margin-bottom: 10px;
+    font-size: 40px;
+    line-height: 47px;
+    font-family: "Roboto";
+    color: var(--salad-green);
+}
+.feature-description {
+    font-size: 15px;
+    line-height: 29px;
+}
+/* Main - END */
+
+
+
+/* Mission - START */
+.our-mission-container {
+    background-color: var(--beige);
+    padding: 76px 0 127px;
+    margin-bottom: 11px;
+}
+.our-mission-body {
+    display: flex;
+    padding: 0 75px 0 44px;
+}
+    /* Our mission image */
+.our-mission-image-wrapper {
+    margin-right: 112px;
+}
+.our-mission-image-wrapper img {
+    max-width: 450px;
+}
+
+    /* Our mission text content */
+.our-mission-body .top-overlap {
+    margin-bottom: 5px;
+}
+.our-mission-body .secondary-heading {
+    margin-bottom: 31px;
+}
+.our-mission-description {
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 80px;
+}
+.our-mission-link {
+    color: var(--aqua-blue);
+    padding: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    border: 1px solid var(--aqua-blue);
+}
+.our-mission-link:hover {
+    color: var(--dark-green);
+    text-shadow: 2px 2px 10px #28485427;
+    opacity: 0.8;
+    border: 1px solid var(--dark-green);
+}
+/* Mission - END */
+
+
+
+/* Sounds good - START */
+.sounds-good-container {
+    background-color: var(--salad-green);
+    padding: 86px 0;
+    margin-bottom: 42px;
+}
+.sounds-good-body {
+    display: flex;
+    padding: 0 75px 0 44px;
+}
+
+    /* Sounds good image */
+.sounds-good-image-wrapper {
+    margin-right: 167px;
+}
+.sounds-good-image-wrapper img {
+    max-width: 241px;
+}
+
+    /* Sounds good text content */
+.sounds-good-body .secondary-heading {
+    margin-bottom: 57px;
+    font-weight: 400;
+    line-height: 64px;
+    max-width: 524px;
+    color: var(--white);
+    margin-left: 11px;
+}
+    /* Sounds good application links */
+.sounds-good-appl-wrapper {
+    display: flex;
+    /* column-gap: 142px; */
+    column-gap: 131px;
+    justify-content: space-between;
+}
+.sounds-good-appl-wrapper a {
+    max-width: 242px;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--white);
+    padding: 4px 10px;
+    border: 1px solid transparent;
+}
+.sounds-good-appl-wrapper a:hover {
+    border: 1px solid var(--white);
+    text-shadow: 2px 2px 10px #28485485;
+    padding: 4px 10px;
+}
+/* Sounds good - END */
+
+
+/* Footer - START */
+.footer-container {
+    margin-bottom: 42px;
+}
+.footer-body {
+    width: 1196px;
+    /* padding: 78px 30px 18px; */
+    background-image: 
+        url(../img/footer.svg);
+    background-repeat: no-repeat;
+    background-size: auto 210px;
+    background-position: 598px 20px;
+}
+.footer-links > div {
+    max-width: 189px;
+}
+.footer-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+    column-gap: 151px;
+}
+
+    /* Footer content */
+.footer-links .secondary-heading {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 18px;
+    margin-bottom: 25px;
+}
+.bottom-link {
+    display: block;
+    color: var(--aqua-blue);
+    margin-bottom: 19px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+    /* Veterinarians */
+/* .veterinarians {
+    margin-right: 151px;
+} */
+
+    /* Find us */
+.find-us {
+    margin-left: auto;
+}
+    /* Address */
+.address-body {
+    margin-bottom: 25px;
+}
+.find-us-item {
+    display: block;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--aqua-blue);
+    margin-bottom: 4px;
+}
+.find-us-item:hover,
+.bottom-link:hover {
+    color: var(--dark-green);
+    text-shadow: 2px 2px 10px #28485427;
+    opacity: 0.8;
+}
+
+    /* Duplicates of top links */
+.nav-links {
+    margin-bottom: 33px;
+    display: flex;
+    column-gap: 39px;    
+}
+
+    /* Bottom bar */
+.trademark {
+    font-size: 13px;
+    line-height: 18px;
+}
+/* Footer - END */
