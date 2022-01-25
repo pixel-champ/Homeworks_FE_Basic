@@ -412,8 +412,7 @@ ul {
     max-width: 1196px;
     padding: 78px 93px 19px 30px;
     margin-bottom: 62px;
-    background-image: 
-        url(../img/footer.svg);
+    background-image: url(../img/footer.svg);
     background-repeat: no-repeat;
     background-size: auto 210px;
     background-position: 598px 98px;
@@ -494,7 +493,7 @@ ul {
 
 
 
-
+/* ////////////////////////////////////////////// */
 /* ------ ATTENTION! ------*/
 /* --- NEW MEDIA QUERY --- */
 
@@ -683,7 +682,7 @@ ul {
     flex-direction: column-reverse;
 }
 .feature-img-wrapper {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
 }
 
     /* Feature content */
@@ -741,7 +740,7 @@ ul {
     position: relative;
 }
 .sounds-good-body .secondary-heading {
-    font-size: 65px;
+    font-size: 60px;
     max-width: 80%;
 }
 .lets-break {
@@ -753,8 +752,8 @@ ul {
     content: "";
     position: absolute;
     display: inline-block;
-    padding: 10px;
-    right: 0px;
+    /* padding: 10px; */
+    right: 0;
     top: 0;
     width:  200px;
     height: 200px;
@@ -819,7 +818,7 @@ ul {
 .find-us-item {
     font-size: 18px;
     line-height: 26px;
-    margin-bottom: 9px;
+    margin-bottom: 14px;
 }
 
     /* Duplicates of top links */
@@ -836,6 +835,8 @@ ul {
 }
 
 
+
+/* ////////////////////////////////////////////// */
 /* ------ ATTENTION! ------*/
 /* --- NEW MEDIA QUERY --- */
 /* A special media query for one footer element only */
@@ -869,7 +870,7 @@ ul {
 
 
 
-
+/* ////////////////////////////////////////////// */
 /* ------ ATTENTION! ------*/
 /* --- NEW MEDIA QUERY --- */
 
@@ -962,6 +963,13 @@ ul {
 
 /* Sounds good - START */
     /* Sounds good text content */
+.sounds-good-container {
+    padding: 60px 0;
+    overflow: hidden;
+}
+.sounds-good-link {
+    z-index: 2;
+}
 .sounds-good-body .secondary-heading {
     max-width: 100%;
 }
@@ -969,9 +977,14 @@ ul {
     display: inline-block;
 }
 .lets-break:after {
-    display: none;
+    /* display: none; */
+    width:  600px;
+    height: 600px;
+    left: 20%;
+    opacity: 0.15;
+    z-index: 1;
 }
-/* Sounds good application links */
+    /* Sounds good application links */
 .sounds-good-appl-wrapper {
     flex-flow: column nowrap;
     align-items: center;
@@ -986,6 +999,19 @@ ul {
 
 
 /* Footer - START */
+.footer-body {
+    background-image: url(../img/footer.svg);
+    background-size: auto 210px;
+    background-position: top 130px right 30px;
+}
+.footer-links {
+    flex-direction: column;
+}
+    /* Footer content */
+    /* Find us */
+.find-us::before {
+    display: none;
+}
 /* Footer - END */
 }
     

@@ -265,10 +265,7 @@
   font-size: 111px;
   margin-right: 46px;
   content: "\e901";
-  color: #284854;
-
-  display: inline;
-  font-size: 25px;
+  color: #fff;
 }
 .icon-hospitals:before {
   font-size: 100px;
