@@ -961,6 +961,26 @@ ul {
 
 
 /* Sounds good - START */
+    /* Sounds good text content */
+.sounds-good-body .secondary-heading {
+    max-width: 100%;
+}
+.lets-break {
+    display: inline-block;
+}
+.lets-break:after {
+    display: none;
+}
+/* Sounds good application links */
+.sounds-good-appl-wrapper {
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 20px;
+}
+.sounds-good-link {
+    max-width: 80%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
 /* Sounds good - END */
 
 
