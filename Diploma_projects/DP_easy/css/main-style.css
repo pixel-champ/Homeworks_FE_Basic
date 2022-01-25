@@ -693,11 +693,13 @@ ul {
 }
 .feature .tertiary-heading {
     font-size: 46px;
+    line-height: 60px;
     margin-bottom: 12px;
     /* text-align: center; */
 }
 .feature-description {
     font-size: 20px;
+    line-height: 38px;
 }
 /* Main - END */
 
