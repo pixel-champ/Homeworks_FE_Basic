@@ -601,7 +601,7 @@ ul {
     padding: 12px 84px;
 }
 
-    /* Hero box (Heading & Description & Image */
+    /* Hero box (Heading & Description & Image) */
 .hero-box {
     padding: 0 32px;
 }
@@ -612,9 +612,10 @@ ul {
     position: relative;
 }
 .primary-heading {
-    font-size: 70px;
+    font-size: 75px;
+    line-height: 75px;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
 }
 .primary-description {
     position: static;
@@ -796,10 +797,7 @@ ul {
     /* Footer content */
 .footer-links .tertiary-heading {
     font-size: 20px;
-    /* font-weight: 400; */
     letter-spacing: 6px;
-    /* line-height: 18px; */
-    /* margin-bottom: 25px; */
 }
 .bottom-link {
     /* margin-bottom: 19px; */
@@ -808,9 +806,7 @@ ul {
 }
 
     /* Veterinarians */
-/* .veterinarians {
-    margin-right: 151px;
-} */
+        /* Nothing to be done yet */
 
     /* Find us */
 .find-us {
@@ -821,8 +817,6 @@ ul {
     margin-bottom: unset;
 }
 .find-us-item {
-    /* display: block; */
-    /* font-style: normal; */
     font-size: 18px;
     line-height: 26px;
     margin-bottom: 9px;
@@ -830,10 +824,7 @@ ul {
 
     /* Duplicates of top links */
 .nav-links {
-    /* margin-bottom: 33px;
-    display: flex; */
     flex-wrap: wrap;
-    /* column-gap: 39px; */
 }
 
     /* Bottom bar */
@@ -883,23 +874,99 @@ ul {
 /* --- NEW MEDIA QUERY --- */
 
 /*  Mobile view  */
-@media (max-width: 640px) {
+@media (max-width: 560px) {
 
-    
-    /* Header - START */
-    /* Header - END */
+/* Header - START */
+    /* Burger menu properties */
+.burger-links-list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+#burger {
+    z-index: 4;
+}
+#burger span {
+    z-index: 3
+}
+#burger-menu {
+    z-index: 2;
+}
+    /* Hero box (Heading & Description & Image) */
+.primary-heading {
+    text-align: start;
+    /* Consider to delete it */
+    font-size: 55px;
+    line-height: 70px;
+} 
+.primary-description {
+    max-width: 100%;
+}
+.primary-description::after {
+    position: static;
+    margin: 30px auto -50px;
+}
+    /* Application links */
+.appl-img-hospitals,
+.appl-img-veterinarians {
+    display: none;
+}
+.hero-appl {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.hero-appl:first-child,
+.hero-appl:nth-child(2) {
+    background-size: 100px;
+    background-position: 97% 90%;
+    background-repeat: no-repeat;
+    background-size: 20%;
+}
+.hero-appl:first-child {
+    background-image: url(../img/header/veterinarians.svg);
+}
+.hero-appl:nth-child(2) {
+    background-image: url(../img/header/hospitals.svg);
+}
+/* Header - END */
 
-    /* Main - START */
-    /* Main - END */
-    
-    /* Mission - START */
-    /* Mission - END */
-    
-    /* Sounds good - START */
-    /* Sounds good - END */
-    
-    /* Footer - START */
-    /* Footer - END */
+
+
+/* Main - START */
+    /* Nothing to be done yet */
+/* Main - END */
+
+
+
+/* Mission - START */
+.our-mission-container {
+    background-image: none;
+    padding-bottom: 30px;
+}
+.our-mission-body {
+    flex-direction: column-reverse;
+}
+    /* Our mission image */
+.our-mission-image-wrapper {
+    display: block;
+    margin-right: 0;
+    margin-top: 30px;
+}
+.our-mission-image-wrapper img {
+    max-width: 100%;
+}
+/* Mission - END */
+
+
+
+/* Sounds good - START */
+/* Sounds good - END */
+
+
+
+/* Footer - START */
+/* Footer - END */
 }
     
     
