@@ -1006,7 +1006,7 @@ ul {
     background-image: url(../img/footer.svg);
     background-size: 40%;
     /* background-size: auto 210px; */
-    background-position: top 130px right 30px;
+    background-position: top 180px right 10px;
 }
 .footer-links {
     flex-direction: column;
