@@ -415,7 +415,8 @@ ul {
     background-image: url(../img/footer.svg);
     background-repeat: no-repeat;
     background-size: auto 210px;
-    background-position: 598px 98px;
+    background-position: 62% 98px;
+    /* background-position: 598px 98px; */
 }
 .footer-links {
     display: flex;
@@ -919,13 +920,13 @@ ul {
 }
 .hero-appl:first-child,
 .hero-appl:nth-child(2) {
-    background-size: 100px;
     background-position: 97% 90%;
     background-repeat: no-repeat;
     background-size: 20%;
 }
 .hero-appl:first-child {
     background-image: url(../img/header/veterinarians.svg);
+    background-size: 18%;
 }
 .hero-appl:nth-child(2) {
     background-image: url(../img/header/hospitals.svg);
@@ -1001,7 +1002,8 @@ ul {
 /* Footer - START */
 .footer-body {
     background-image: url(../img/footer.svg);
-    background-size: auto 210px;
+    background-size: 40%;
+    /* background-size: auto 210px; */
     background-position: top 130px right 30px;
 }
 .footer-links {
