@@ -1,33 +1,35 @@
+/*  Desktop view  */
+
 /* Default settings */
 
 /* Nunito Sans (400,700) & Roboto (400&700) */
 @import url(../fonts/font-style.css);
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  --deep-blue: #284854;
-  --beige: #f4f6f0;
-  --dark-beige: #D3DAC3;
-  --aqua-blue: #60c1bd;
-  --salad-green: #8bc441;
-  --dark-green: #798B56;
-  --white: #fff;
+    --deep-blue: #284854;
+    --beige: #f4f6f0;
+    --dark-beige: #D3DAC3;
+    --aqua-blue: #60c1bd;
+    --salad-green: #8bc441;
+    --dark-green: #798B56;
+    --white: #fff;
 }
 
 body {
-  font-family: "Nunito Sans";
-  color: var(--deep-blue);
-  overflow-x: hidden;
-  overflow-y: scroll;
+    font-family: "Nunito Sans";
+    color: var(--deep-blue);
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 span.d-block {
@@ -37,17 +39,17 @@ span.d-block {
 h1,
 h2,
 h3 {
-  font-family: "Roboto";
-  font-weight: 700;
+    font-family: "Roboto";
+    font-weight: 700;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 [class*="-body"] {
-  width: 1230px;
-  margin: 0 auto;
+    max-width: 1230px;
+    margin: 0 auto;
 }
 
 .aqua-blue-link:hover {
@@ -58,49 +60,65 @@ ul {
 
 /* Header - START */
 .header-container {
-  background-color: var(--deep-blue);
-  padding-top: 23px;
-  margin-bottom: 289px;
+    background-color: var(--deep-blue);
+    padding-top: 23px;
+    margin-bottom: 289px;
+    position: relative;
+}
+.header-body {
+    position: static;
 }
 
     /* Logo & Top links & Login */
 .top-bar {
-  padding: 23px 75px 25px 44px;
-  margin-bottom: 135px;
-  background-color: #60c1bd;
-  border-radius: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    padding: 23px 75px 25px 44px;
+    margin-bottom: 135px;
+    background-color: #60c1bd;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .brand-logo {
-  font-size: 30px;
-  color: var(--white);
+    font-size: 30px;
+    color: var(--white);
 }
 .brand-logo:hover {
     opacity: 0.7;
 }
 .top-links-list {
-  display: flex;
-  column-gap: 95px;
+    display: flex;
+    column-gap: 95px;
 }
-.top-link {
-  color: inherit;
-  font-size: 18px;
-  /* margin-right: 95px; */
+.top-link,
+.burger-link {
+    color: inherit;
+    font-size: 18px;
+    /* margin-right: 95px; */
 }
-.top-link:hover {
+.top-link:hover,
+.burger-link:hover {
     color: var(--white);
 }
-.login-btn {
-  padding: 4px 21px;
-  font-size: 14px;
-  line-height: 19px;
-  color: var(--white);
-  border: 1px solid var(--white);
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
+.login-btn,
+.burger-login-btn {
+    padding: 4px 21px;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+.login-btn:hover,
+.burger-login-btn:hover {
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.2)
+}
+.login-btn:active,
+.burger-login-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.5)
 }
 
     /* Hero box */
@@ -135,13 +153,30 @@ ul {
     top: 123px;
     display: flex;
     justify-content: space-between;
+    
 }
+.appl-img-veterinarians {
+    width: 101px;
+    background-image: url(../img/header/veterinarians.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.appl-img-hospitals {
+    width: 119px;
+    background-image: url(../img/header/hospitals.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+    /* Application content */
 .hero-appl {
     background-color: var(--beige);
     height: 203px;
     width: 506px;
     padding: 45px 30px 47px;
     display: flex;
+    column-gap: 46px;
 }
 .appl-description {
     max-width: 237px;
@@ -158,16 +193,21 @@ ul {
     color: var(--aqua-blue);
     font-size: 20px;
 }
+    /* Burger button (Tablet & Mobile) */
+#burger,
+#burger-menu {
+    display: none;
+}
 /* Header - END */
 
 
 
 /* Main - START */
 .main-body {
-    width: 956px;
+    max-width: 956px;
     margin: 0 auto 80px;
 }
-/* Header (Main) */
+/* Header (Main section) */
 .header-main {
     text-align: center;
     margin-bottom: 83px;
@@ -293,12 +333,16 @@ ul {
     font-size: 16px;
     line-height: 22px;
     border: 1px solid var(--aqua-blue);
+    appearance: button; 
 }
 .our-mission-link:hover {
     color: var(--dark-green);
     text-shadow: 2px 2px 10px #28485427;
     opacity: 0.8;
     border: 1px solid var(--dark-green);
+}
+.our-mission-link:active {
+    transform: scale(0.97);
 }
 /* Mission - END */
 
@@ -339,18 +383,23 @@ ul {
     column-gap: 131px;
     justify-content: space-between;
 }
-.sounds-good-appl-wrapper a {
+.sounds-good-link {
     max-width: 242px;
     font-size: 20px;
     line-height: 27px;
     color: var(--white);
     padding: 4px 10px;
     border: 1px solid transparent;
+    appearance: button;
 }
-.sounds-good-appl-wrapper a:hover {
+.sounds-good-link:hover {
     border: 1px solid var(--white);
     text-shadow: 2px 2px 10px #28485485;
     padding: 4px 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.sounds-good-link:active {
+    transform: scale(0.97);
 }
 /* Sounds good - END */
 
@@ -360,16 +409,14 @@ ul {
     margin-bottom: 42px;
 }
 .footer-body {
-    width: 1196px;
-    /* padding: 78px 30px 18px; */
+    max-width: 1196px;
+    padding: 78px 93px 19px 30px;
+    margin-bottom: 62px;
     background-image: 
         url(../img/footer.svg);
     background-repeat: no-repeat;
     background-size: auto 210px;
-    background-position: 598px 20px;
-}
-.footer-links > div {
-    max-width: 189px;
+    background-position: 598px 98px;
 }
 .footer-links {
     display: flex;
@@ -377,9 +424,12 @@ ul {
     margin-bottom: 32px;
     column-gap: 151px;
 }
+.footer-links > div {
+    max-width: 189px;
+}
 
     /* Footer content */
-.footer-links .secondary-heading {
+.footer-links .tertiary-heading {
     font-size: 13px;
     font-weight: 400;
     text-transform: uppercase;
@@ -427,7 +477,7 @@ ul {
 .nav-links {
     margin-bottom: 33px;
     display: flex;
-    column-gap: 39px;    
+    column-gap: 39px;
 }
 
     /* Bottom bar */
@@ -436,3 +486,546 @@ ul {
     line-height: 18px;
 }
 /* Footer - END */
+
+
+
+
+
+
+
+
+
+/* ------ ATTENTION! ------*/
+/* --- NEW MEDIA QUERY --- */
+
+/*  Tablet view  */
+@media (max-width: 1024px) {
+
+/* Header - START */
+.top-links-list,
+.login-btn {
+    display: none;
+}
+
+    /* Burger button */
+#burger {
+    display: block;
+    width: 50px;
+    z-index: 1;
+    position: absolute;
+    right: 44px;
+    user-select: none;
+}
+#burger input {
+    display: block;
+    width: 55px;
+    height: 25px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    left: -3px;
+    opacity: 0;
+}
+    /* A quick hamburger */
+#burger span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    /* position: relative; */
+    background-color: var(--white);
+    border-radius: 3px;
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+#burger span:first-child {
+    transform-origin: 0% 0%;
+}
+#burger span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+    /* Setting a crossmark & Burger animation */
+#burger input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-15px, -20px);
+    background: var(--deep-blue);
+    height: 6px;
+}
+        /* Making the middle one to disappear */
+#burger input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+}
+        /* Setting the last one in the other direction */
+#burger input:checked ~ span:nth-last-child(2)
+{
+    transform: rotate(-45deg)  translate(-8px, 16px);
+}
+
+    /* Burger menu properties */
+#burger-menu {
+    width: 100vw;
+    position: absolute;
+    background-color: var(--aqua-blue);
+    margin-left: 0px;
+    padding: 43px 40px 20px;
+    top: 0%;
+    left: 0%;
+    transform-origin: 0% 00%;
+    transform: translate(0%, -100%);
+    transition: transform 1s cubic-bezier(0.77,0.2,0.05,1);
+    border-bottom: 2px solid var(--white);
+    display: flex;
+    /* gap: 44px; */
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 20px;
+}
+.burger-links-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+}
+.burger-link {
+    font-size: 24px;
+}
+.brand-logo {
+    font-size: 50px;
+}
+.burger-login-btn {
+    font-size: 18px;
+    padding: 12px 84px;
+}
+
+    /* Hero box (Heading & Description & Image */
+.hero-box {
+    padding: 0 32px;
+}
+.hero-img {
+    display: none;
+}
+.hero-text {
+    position: relative;
+}
+.primary-heading {
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+}
+.primary-description {
+    position: static;
+    font-size: 22px;
+    line-height: 34px;
+    max-width: 60%;
+}
+.primary-description::after {
+    content: "";
+    display: block;
+    position: absolute;
+    /* top: 270px; */
+    top: 48%;
+    right: 0;
+    height: 180px;
+    width: 150px;
+    /* border: 1px solid white; */
+    padding: 40px;
+    background-image: url(/img/header/vet-staffing.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+    /* Application links */
+.hero-appl-wrapper {
+    align-items: center;
+    row-gap: 30px;
+    flex-flow: column nowrap;
+}
+.hero-appl {
+    max-width: 80%;
+    height: 180px;
+    padding: 30px 20px;
+    column-gap: 35px;
+}
+.appl-title {
+    font-size: 42px;
+}
+.appl-link {
+    font-size: 24px;
+}
+/* Header - END */
+
+
+
+/* Main - START */
+.main-body {
+    padding: 0 30px;
+}
+
+    /* Header (Main section) */
+.secondary-heading {
+    font-size: 65px;
+}
+.top-overlap {
+    font-size: 26px;
+}
+
+    /* Features */
+.feature {
+    flex-flow: column nowrap;
+    margin-bottom: 140px;
+}
+.feature.next {
+    flex-direction: column-reverse;
+}
+.feature-img-wrapper {
+    margin-bottom: 10px;
+}
+
+    /* Feature content */
+.middle-overlap {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.feature .tertiary-heading {
+    font-size: 46px;
+    margin-bottom: 12px;
+    /* text-align: center; */
+}
+.feature-description {
+    font-size: 20px;
+}
+/* Main - END */
+
+
+
+/* Mission - START */
+.our-mission-container {
+    background-image: url(../img/mission.svg);
+    background-repeat: no-repeat;
+    background-size: 330px;
+    background-position: bottom 10px right 10px;
+}
+    /* Our mission image */
+.our-mission-image-wrapper {
+    display: none;
+}
+    /* Our mission text content */
+.our-mission-description {
+    font-size: 23px;
+    line-height: 38px;
+}
+.our-mission-link {
+    padding: 12px;
+    font-size: 20px;
+    line-height: 28px;
+}
+/* Mission - END */
+
+
+
+/* Sounds good - START */
+.sounds-good-body {
+    padding: 0 30px;
+}
+    /* Sounds good image */
+.sounds-good-image-wrapper {
+    display: none;
+}
+    /* Sounds good text content */
+.sounds-good-body {
+    position: relative;
+}
+.sounds-good-body .secondary-heading {
+    font-size: 65px;
+    max-width: 80%;
+}
+.lets-break {
+    margin-top: 15px;
+    display: block;
+    font-size: 50px;
+}
+.lets-break:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    right: 0px;
+    top: 0;
+    width:  200px;
+    height: 200px;
+    background-image: url(../img/sounds-good-white-flipped.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+    /* Sounds good application links */
+.sounds-good-appl-wrapper {
+    justify-content: center;
+    column-gap: 10%;
+}
+.sounds-good-link {
+    max-width: 40%;
+    text-align: center;
+}
+/* Sounds good - END */
+
+
+
+/* Footer - START */
+.footer-body {
+    max-width: 1196px;
+    padding: 45px 30px 19px;
+    margin-bottom: 62px;
+    background-image: none;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    column-gap: 2%;
+}
+.footer-links > div {
+    max-width: unset;
+    flex-basis: 30%;
+}
+
+    /* Footer content */
+.footer-links .tertiary-heading {
+    font-size: 20px;
+    /* font-weight: 400; */
+    letter-spacing: 6px;
+    /* line-height: 18px; */
+    /* margin-bottom: 25px; */
+}
+.bottom-link {
+    /* margin-bottom: 19px; */
+    font-size: 18px;
+    line-height: 26px;
+}
+
+    /* Veterinarians */
+/* .veterinarians {
+    margin-right: 151px;
+} */
+
+    /* Find us */
+.find-us {
+    margin-left: unset;
+}
+    /* Address */
+.address-body {
+    margin-bottom: unset;
+}
+.find-us-item {
+    /* display: block; */
+    /* font-style: normal; */
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 9px;
+}
+
+    /* Duplicates of top links */
+.nav-links {
+    /* margin-bottom: 33px;
+    display: flex; */
+    flex-wrap: wrap;
+    /* column-gap: 39px; */
+}
+
+    /* Bottom bar */
+.trademark {
+    font-size: 18px;
+    line-height: 20px;
+}
+/* Footer - END */
+}
+
+
+/* ------ ATTENTION! ------*/
+/* --- NEW MEDIA QUERY --- */
+/* A special media query for one footer element only */
+@media (max-width: 710px) {
+.footer-links {
+    justify-content: flex-end;
+    column-gap: 6%;
+}
+.footer-links > div {
+    flex-basis: 47%;
+    margin-bottom: 40px;
+}
+    /* Footer content */
+    /* Find us */
+.find-us::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 47%;
+    height: 200px;
+    background-image: url(../img/footer.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 30px;
+}
+    /* Duplicates of top links */
+.nav-links {
+    column-gap: 5%;
+}
+}
+
+
+
+
+/* ------ ATTENTION! ------*/
+/* --- NEW MEDIA QUERY --- */
+
+/*  Mobile view  */
+@media (max-width: 640px) {
+
+    
+    /* Header - START */
+    /* Header - END */
+
+    /* Main - START */
+    /* Main - END */
+    
+    /* Mission - START */
+    /* Mission - END */
+    
+    /* Sounds good - START */
+    /* Sounds good - END */
+    
+    /* Footer - START */
+    /* Footer - END */
+}
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Desktop view  */
+
+/* Header - START */
+/* Header - END */
+
+/* Main - START */
+/* Main - END */
+
+/* Mission - START */
+/* Mission - END */
+
+/* Sounds good - START */
+/* Sounds good - END */
+
+/* Footer - START */
+/* Footer - END */
+
+
+
+
+
+
+
+
+
+
+/*  Desktop view  */
+
+/* Header - START */
+/* Header - END */
+
+/* Main - START */
+/* Main - END */
+
+/* Mission - START */
+/* Mission - END */
+
+/* Sounds good - START */
+/* Sounds good - END */
+
+/* Footer - START */
+/* Footer - END */
+

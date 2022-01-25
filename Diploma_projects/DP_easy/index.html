@@ -4,13 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IndeVets is on a mission to make veterinary medicine better. We unite the nation’s top veterinarians and animal hospitals to deliver what matters most in animal care — happy, healthy doctors performing at their best."
+    />
     <title>IndeVets - Veterinary Medicine</title>
+    <!-- Favicon images -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- Project style sheet -->
     <link rel="stylesheet" href="css/main-style.css" />
     <link rel="stylesheet" href=".css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- SECTION - Header -->
     <header class="header-container">
       <!-- Header content -->
       <div class="header-body">
@@ -30,6 +53,28 @@
             </li>
           </ul>
           <button class="login-btn">Login</button>
+          <!-- Burger button & Popup menu -->
+          <div id="burger">
+            <input id="burger-input" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <!-- Links for the Tablet & Mobile views -->
+          <ul id="burger-menu">
+            <li>         
+              <a class="brand-logo" href="#" target="_blank">IndeVets</a></li>
+            <li>
+              <ul class="burger-links-list">
+                <li><a class="burger-link" href="#" target="_blank">Veterinarians</a></li>
+                <li><a class="burger-link" href="#" target="_blank">Hospitals</a></li>
+                <li><a class="burger-link" href="#" target="_blank">Why IndeVets?</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="burger-login-btn">Login</button>
+            </li>
+        </ul>
         </nav>
         <!-- Hero box -->
         <div class="hero-box">
@@ -57,9 +102,9 @@
           <div class="hero-appl-wrapper">
             <!-- Veterinarians -->
             <div class="hero-appl">
-              <span class="icon-veterinarians"></span>
+              <div class="appl-img-veterinarians"></div>
               <div class="appl-description">
-                <span class="appl-title d-block">Veterinarians</span>
+                <h2 class="appl-title d-block">Veterinarians</h2>
                 <a class="appl-link aqua-blue-link" href="#" target="_blank"
                   >Apply to become an IndeVet
                 </a>
@@ -67,9 +112,9 @@
             </div>
             <!-- Hospitals -->
             <div class="hero-appl">
-              <span class="icon-hospitals"></span>
+              <div class="appl-img-hospitals"></div>
               <div class="appl-description">
-                <span class="appl-title d-block">Hospitals</span>
+                <h2 class="appl-title d-block">Hospitals</h2>
                 <a class="appl-link aqua-blue-link" href="#" target="_blank">
                   Become an IndeVets partner
                 </a>
@@ -79,7 +124,7 @@
         </div>
       </div>
     </header>
-    <!-- Main content -->
+    <!-- SECTION - Main content -->
     <main class="main-container">
       <div class="main-body">
         <!-- Welcoming header -->
@@ -148,7 +193,7 @@
         </div>
       </div>
     </main>
-    <!-- Our mission -->
+    <!-- SECTION - Our mission -->
     <section class="our-mission-container">
       <div class="our-mission-body">
         <!-- Image -->
@@ -173,7 +218,7 @@
         </div>
       </div>
     </section>
-    <!-- Sounds good -->
+    <!-- SECTION - Sounds good -->
     <section class="sounds-good-container">
       <div class="sounds-good-body">
         <!-- Image -->
@@ -186,14 +231,14 @@
         <!-- Text content -->
         <div class="sounds-good-content">
           <h2 class="secondary-heading">
-            Sounds pretty good, right? Let&#8217;s do this.
+            Sounds pretty good, right? <span class="lets-break">Let&#8217;s do this.</span>
           </h2>
           <!-- Application links -->
           <div class="sounds-good-appl-wrapper">
-            <a href="#" target="_blank"
+            <a class="sounds-good-link" href="#" target="_blank"
               >I want to be an IndeVet. Take me to the application page!</a
             >
-            <a href="#" target="_blank"
+            <a class="sounds-good-link" href="#" target="_blank"
               >We want to be one of your awesome hospital partners.</a
             >
           </div>
@@ -201,42 +246,66 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- SECTION - Footer -->
     <footer class="footer-container">
       <div class="footer-body">
         <!-- Footer links -->
         <div class="footer-links">
           <!-- Veterinarians -->
-          <div class="veterinarians-links">
-            <h2 class="secondary-heading footer-link-heading">Veterinarians</h2>
+          <div class="veterinarians-links link-set">
+            <h2 class="tertiary-heading footer-link-heading">Veterinarians</h2>
             <ul>
-              <li><a class="bottom-link" href="#" target="_blank">Explore IndeVets</a></li>
-              <li><a class="bottom-link" href="#" target="_blank">Become an IndeVet</a></li>
-              <li><a class="bottom-link" href="#" target="_blank">FAQs for Veterinarians</a></li>
+              <li>
+                <a class="bottom-link" href="#" target="_blank"
+                  >Explore IndeVets</a
+                >
+              </li>
+              <li>
+                <a class="bottom-link" href="#" target="_blank"
+                  >Become an IndeVet</a
+                >
+              </li>
+              <li>
+                <a class="bottom-link" href="#" target="_blank"
+                  >FAQs for Veterinarians</a
+                >
+              </li>
             </ul>
           </div>
           <!-- Hospitals -->
-          <div class="hospitals-links">
-            <h2 class="secondary-heading footer-link-heading">Hospitals</h2>
+          <div class="hospitals-links link-set">
+            <h2 class="tertiary-heading footer-link-heading">Hospitals</h2>
             <ul>
               <li>
-                <a class="bottom-link" href="#" target="_blank">Partnering with IndeVets</a>
+                <a class="bottom-link" href="#" target="_blank"
+                  >Partnering with IndeVets</a
+                >
               </li>
-              <li><a class="bottom-link" href="#" target="_blank">Become a Partner</a></li>
               <li>
-                <a class="bottom-link" href="#" target="_blank">Frequently Asked Questions</a>
+                <a class="bottom-link" href="#" target="_blank"
+                  >Become a Partner</a
+                >
+              </li>
+              <li>
+                <a class="bottom-link" href="#" target="_blank"
+                  >Frequently Asked Questions</a
+                >
               </li>
             </ul>
           </div>
           <!-- Address & Phone concact -->
-          <div class="find-us">
-            <h2 class="secondary-heading footer-link-heading">Find Us</h2>
+          <div class="find-us link-set">
+            <h2 class="tertiary-heading footer-link-heading">Find Us</h2>
             <address class="address-body">
-              <a class="find-us-item" href="https://goo.gl/maps/NXuv1nmBWRnXdvbB7" target="_blank">
+              <a
+                class="find-us-item"
+                href="https://goo.gl/maps/NXuv1nmBWRnXdvbB7"
+                target="_blank"
+              >
                 <span class="find-us-item">
-                    990 Spring Garden Street <br> 
-                    Suite 402 <br> 
-                    Philadelphia, PA 19123
+                  990 Spring Garden Street <br />
+                  Suite 402 <br />
+                  Philadelphia, PA 19123
                 </span>
               </a>
             </address>
@@ -246,24 +315,24 @@
         </div>
         <!-- Duplicates of the top links -->
         <ul class="nav-links">
-          <li><a class="bottom-link" href="#" target="_blank">Why IndeVets?</a></li>
+          <li>
+            <a class="bottom-link" href="#" target="_blank">Why IndeVets?</a>
+          </li>
           <li><a class="bottom-link" href="#" target="_blank">Blog</a></li>
           <li><a class="bottom-link" href="#" target="_blank">Jobs</a></li>
-          <li><a class="bottom-link" href="#" target="_blank">Contact Us</a></li>
+          <li>
+            <a class="bottom-link" href="#" target="_blank">Contact Us</a>
+          </li>
           <li><a class="bottom-link" href="#" target="_blank">Login</a></li>
-          <li><a class="bottom-link" href="#" target="_blank">Privacy Policy</a></li>
+          <li>
+            <a class="bottom-link" href="#" target="_blank">Privacy Policy</a>
+          </li>
         </ul>
         <!-- Bottom bar -->
         <span class="trademark">&#169; IndeVets 2021</span>
       </div>
     </footer>
+    <!-- JavaScripts -->
+    <script src="js/script.js"></script>
   </body>
 </html>
-
-<!-- Footer image -->
-<!-- <div class="foot-image-link">
-          <img
-            src="img/footer.svg"
-            alt="A dog reaching out to a veterinarian"
-          />
-        </div> -->
