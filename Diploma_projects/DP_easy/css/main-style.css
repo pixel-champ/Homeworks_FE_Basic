@@ -633,7 +633,7 @@ ul {
     width: 150px;
     /* border: 1px solid white; */
     padding: 40px;
-    background-image: url(/img/header/vet-staffing.svg);
+    background-image: url(../img/header/vet-staffing.svg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
