@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?oooynm');
+  src:  url('../fonts/icomoon.eot?oooynm#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?oooynm') format('truetype'),
+    url('../fonts/icomoon.woff?oooynm') format('woff'),
+    url('../fonts/icomoon.svg?oooynm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hollow-star:before {
+  content: "\e903";
+  color: #4db282;
+  margin-right: 15px;
+  font-size: 23px;
+}
+.icon-clients:before {
+  content: "\e900";
+  font-size: 27px;
+}
+.icon-success:before {
+  content: "\e901";
+  font-size: 29px;
+  
+}
+.icon-tick:before {
+  content: "\e902";
+  color: #4db282;
+  margin-right: 8px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/* My styles */
+.statistics-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: black;
+}
+
+.clients .statistics-icon {
+  background-color: #FFFAEA;
+}
+.success .statistics-icon {
+  background-color: #EEF6FF;
+}
