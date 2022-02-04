@@ -1,5 +1,8 @@
 body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
   /* fallback for old browsers */
   background: #fccb90;
 
