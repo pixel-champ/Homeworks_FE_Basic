@@ -1355,6 +1355,9 @@ a {
 
 /* TABLET VIEW (up to 1024px) - START */
 @media (max-width: 1024px) {
+    [class*="-body"] {
+        max-width: 1024px;
+    }
         /* NEW SECTION */
         /* Header & Navigation - START */
     .header-body .hero-box {
@@ -1524,6 +1527,9 @@ a {
 
 /* TABLET VIEW (up to 860px) - START */
 @media (max-width: 860px) {
+    [class*="-body"] {
+        max-width: 860px;
+    }
     /* NEW SECTION */
     /* Header & Navigation - START */
     /* Burger menu */
@@ -1646,7 +1652,10 @@ a {
 
 
 /* MOBILE VIEW (up to 768px) - START */
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
+    [class*="-body"] {
+        max-width: 768px;
+    }  
         /* NEW SECTION */
         /* Header & Navigation - START */
     .header-body {
@@ -1870,6 +1879,9 @@ a {
 
 /* MOBILE VIEW (up to 640px) - START */
 @media (max-width: 640px) {
+    [class*="-body"] {
+        max-width: 640px;
+    }
         /* Default settings - START  */
         /* Hero image elements */
     [class*="hero-img-element-"] {
