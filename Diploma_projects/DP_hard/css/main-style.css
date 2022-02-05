@@ -935,6 +935,7 @@ a {
     height: 48px;
     border-radius: 50%;
     border: transparent;
+    cursor: pointer;
 }
 .my-slick-btn:hover {
     box-shadow: var(--m-box-shadow);
@@ -944,7 +945,7 @@ a {
 }
 .btn-back {
     background-image: url(../img/testimonials/back.svg);
-    background-position: top 14px left 16px;
+    background-position: top 14px left 16px;    
 }
 .btn-forward {
     background-image: url(../img/testimonials/forward.svg);
