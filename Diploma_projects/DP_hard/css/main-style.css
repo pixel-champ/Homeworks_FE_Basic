@@ -60,6 +60,7 @@ a {
     max-width: 1270px;
     padding: 0 50px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
     /* Button settings */
