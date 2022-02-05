@@ -6,6 +6,7 @@
 /* Default settings - START */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 * {
     margin: 0;
@@ -60,7 +61,7 @@ a {
     max-width: 1270px;
     padding: 0 50px;
     margin: 0 auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
     /* Button settings */
