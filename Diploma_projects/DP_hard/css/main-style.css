@@ -1080,6 +1080,7 @@ a {
     box-shadow: var(--s-box-shadow);
     margin-bottom: 32px;
     border-radius: 8px;
+    position: relative;
 }
 .hero-card-wrapper:hover {
     box-shadow: var(--xl-box-shadow);
@@ -1119,6 +1120,7 @@ a {
     border: 1px solid var(--pale-blue);
     border-radius: 8px;
     box-shadow: var(--s-box-shadow);
+    position: relative;
 }
 .regular-card:hover {
     box-shadow: var(--xl-box-shadow);
@@ -1131,6 +1133,15 @@ a {
         /* Browse more cards button */
 .regular-cards-wrapper .button-wrapper {
     margin-top: 64px;
+}
+        /* Making each article clickable */
+.article-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 /* Latest articles - END */
 
